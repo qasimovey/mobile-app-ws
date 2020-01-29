@@ -6,7 +6,8 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class Utils {
-	public String generateID() {
-		return UUID.randomUUID().toString();
+	private long prev_vall=0;
+	public long generateID() {
+		return prev_vall++;
 	}
 }

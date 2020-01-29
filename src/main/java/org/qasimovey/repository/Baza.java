@@ -1,14 +1,14 @@
 package org.qasimovey.repository;
 
-import java.util.ArrayList;
+/*import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.qasimovey.model.User;
+import org.qasimovey.model.entity.User;
 import org.qasimovey.shared.dto.UserDTO;
-import org.springframework.stereotype.Component;
-
+import org.springframework.stereotype.Component;*/
+/*
 @Component
 public class Baza {
 	private Map<String,User> baza;
@@ -42,3 +42,4 @@ public class Baza {
 		return baza.containsKey(key);
 	}
 }
+*/

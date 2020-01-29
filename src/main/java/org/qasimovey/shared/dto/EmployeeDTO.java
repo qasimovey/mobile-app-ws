@@ -9,13 +9,13 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
-public class UserDTO implements Serializable {
+public class EmployeeDTO implements Serializable {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 
-	private String Id;
+	private long Id;
 	
 	@NotNull(message = "Adi teyin olunmayib")
 	private String FirstName;

@@ -9,6 +9,11 @@ Spring Starter Web ,project lombok , jackson-dataformat
  
  - Exception Handler is added
  - List is used to store data
+ 
+ 1.0.1:
+ 
+ - H2 Database Configuration is added
+ - Employee entity added
 
 ## Installation
 

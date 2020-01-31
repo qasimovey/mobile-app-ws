@@ -4,6 +4,7 @@ import lombok.*;
 import javax.persistence.*;
 import javax.validation.constraints.*;
 import java.io.Serializable;
+import java.util.Date;
 
 @Data
 @NoArgsConstructor
@@ -32,7 +33,16 @@ public class Employee implements Serializable{
     @NotNull(message = "Email xanasi bos ola bilmez")
     @Email(message = "Email formati duzgun deyil")
     @Size(min = 1)
-    @Column(name="EMAIL")
+    @Column(name="EMAILL")
     private String email;
+
+    @Column(name = "SALARY")
+    private long Salary;
+
+    @Column(name = "HIRE_DATE")
+    private Date Hiring_date;
+
+    @Column(name = "DEPARTMENT_ID")
+    private int Department_id;
 
 }

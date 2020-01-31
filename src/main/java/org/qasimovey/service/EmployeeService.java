@@ -78,17 +78,20 @@ public class EmployeeService implements EmployeeServiceI {
 
 		if(!employeeRepository.existsById(id)) throw new FavoriteException("Teyin edilen ID li Employee yoxdur");
 
-		Employee uu=employeeRepository.findById(id).get();
-
+		Employee uu=new Employee();//employeeRepository.findById(id).get();
+		BeanUtils.copyProperties(dto, uu);
+		/*
 		if(dto.getEmail()!=null && !dto.getEmail().equals(uu.getEmail()) )
 			uu.setEmail(dto.getEmail());
 		if(dto.getFirstName()!=null && !dto.getFirstName().equals(uu.getFirstName()) )
 			uu.setFirstName(dto.getFirstName());
 		if(dto.getLastName()!=null && !dto.getLastName().equals(uu.getLastName()) )
 			uu.setLastName(dto.getLastName());
+		*/
+
 
 		employeeRepository.save(uu);
-		BeanUtils.copyProperties(uu, dto);
+
 	return dto;
 }
 	

@@ -10,6 +10,7 @@ import org.springframework.context.annotation.Bean;
 
 import javax.annotation.PostConstruct;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 
 @SpringBootApplication
@@ -32,10 +33,8 @@ public class MobileAppWsApplication {
 	@Bean
 	public CommandLineRunner run(EmployeeRepository employeeRepository) throws Exception {
 		return (String[] args) -> {
-			Employee user1 = new Employee(1,"John", "AAAAA","john@domain.com");
-			Employee user2 = new Employee(2,"Julie","bbbbbb", "julie@domain.com");
+			Employee user1 = new Employee(1, "ADMIN", "ADMIN", "ADMIN@test.com", 9999999, new Date(System.currentTimeMillis()),90);
 			employeeRepository.save(user1);
-			employeeRepository.save(user2);
 			employeeRepository.flush();
 			//employeeRepository.findAll().forEach(user -> System.out.println(user);
 		};
